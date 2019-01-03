@@ -1,5 +1,5 @@
 <div>
-  <input type="text" [formControl]="searchTerm">
+  <input type="text" [formControl]="searchTerm" placeholder="Jeu, Karaoké, Sport ...">
   <br>
-  <span>{{result}}</span>
+  <span>{{result | json}}</span>
 </div>
