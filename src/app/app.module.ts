@@ -39,6 +39,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent}, // localhost:4200
   {path: 'carte', component: CarteComponent},  // localhost:4200/carte
   {path: 'reserve', component: ReserveComponent},
+  {path: 'schedule', component: ScheduleComponent},
   {path: 'contact', component: ContactComponent}
 ];
 
