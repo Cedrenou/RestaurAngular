@@ -18,7 +18,13 @@ import {
   MatTableModule,
   MatPaginatorModule,
   MatSortModule,
-  MatDividerModule
+  MatDividerModule,
+  MatDatepickerModule,
+  MatInputModule,
+  MAT_DATE_LOCALE,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatNativeDateModule
 } from '@angular/material';
 import {HomeComponent} from './home/home.component';
 import {CarteComponent} from './carte/carte.component';
@@ -26,6 +32,8 @@ import {ReserveComponent} from './reserve/reserve.component';
 import {ContactComponent} from './contact/contact.component';
 import {MainDashComponent} from './main-dash/main-dash.component';
 import {DishTableComponent} from './dish-table/dish-table.component';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, // localhost:4200
@@ -43,7 +51,8 @@ const routes: Routes = [
     ReserveComponent,
     ContactComponent,
     MainDashComponent,
-    DishTableComponent
+    DishTableComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
@@ -61,9 +70,16 @@ const routes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     MatDividerModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{provide: MAT_DATE_LOCALE, useValue: 'fr-FR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
