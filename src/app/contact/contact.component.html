@@ -1,3 +1,9 @@
-<p>
-  contact works!
-</p>
+<app-phone [user]="standard" (zoom)="displayBig($event)"></app-phone>
+<mat-divider></mat-divider>
+<app-phone [user]="sommelier" (zoom)="displayBig($event)"></app-phone>
+<mat-divider></mat-divider>
+<app-phone [user]="boucher" (zoom)="displayBig($event)"></app-phone>
+<mat-divider></mat-divider>
+
+
+<div class="phone" *ngIf="numberToDisplay !== ''">{{numberToDisplay}}</div>
